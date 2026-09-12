@@ -69,7 +69,12 @@ def decode_values(msg):
     exp = grib1_signed_int(msg[bo + 4:bo + 6])
     ref = ibm370_float(msg[bo + 6:bo + 10])
     raw = msg[bo + 11 + 1:bo + blen]  # 1 filler octet, then packed uint16
-    packed = np.frombuffer(raw, dtype=">u2").astype(np.float64)
+    # NOTE: this CDS GRIB stores the 16-bit words little-endian (bytes
+    # swapped vs the GRIB1 spec, which mandates big-endian). Verified by
+    # decoding all 68 months both ways and checking the catchment monthly
+    # means against the official ECMWF/ERA5/HOURLY ingest in Earth Engine:
+    # little-endian matches within ~5%, big-endian is 15-80x too high.
+    packed = np.frombuffer(raw, dtype="<u2").astype(np.float64)
     return (ref + packed * (2.0 ** exp)).reshape(NJ, NI)
 
 

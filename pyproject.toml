@@ -8,11 +8,13 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "matplotlib",
+    "numpy",
+    "rasterio",
+    "shapely",
+    "tifffile",
     "xarray>=2026.7.0",
 ]
-
-[project.scripts]
-ecmwf-download = "ecmwf_download:main"
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]

@@ -87,3 +87,5 @@ figures/
 .env.*
 *.pem
 *.key
+
+data/
