@@ -1,0 +1,89 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+*$py.class
+build/
+dist/
+wheels/
+*.egg-info/
+.eggs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Installers / packaging
+*.whl
+*.tar.gz
+
+# Testing / coverage / linting
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+
+# Type checking / editors
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# uv / pip
+uv.lock.tmp
+pip-wheel-metadata/
+*.log
+
+# Project data (large, local-only ERA5 / geospatial artefacts)
+*.grib
+*.grib1
+*.grib2
+*.grb
+*.grb1
+*.grb2
+*.nc
+*.netcdf
+*.h5
+*.hdf5
+*.he5
+*.tif
+*.tiff
+*.gtiff
+*.vrt
+*.zarr/
+*.npy
+*.npz
+data/
+downloads/
+raw/
+processed/
+outputs/
+out/
+plots/
+figures/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+!README*.png
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key

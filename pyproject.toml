@@ -1,0 +1,19 @@
+[project]
+name = "ecmwf-download"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Sylesh Peddinti", email = "syleshpeddinti2026@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "xarray>=2026.7.0",
+]
+
+[project.scripts]
+ecmwf-download = "ecmwf_download:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
